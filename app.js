@@ -76,7 +76,7 @@ app.post("/forgot-password", async (req, res) => {
           expiresIn: "5m",
         }
       );
-      const link = `http://localhost:5000/reset-password/${oldUser._id}/${token}`;
+      const link = `https://mern-backend-07k9.onrender.com/reset-password/${oldUser._id}/${token}`;
       console.log(link);
       var transporter = nodemailer.createTransport({
         service: "gmail",
